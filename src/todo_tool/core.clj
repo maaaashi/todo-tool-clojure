@@ -1,6 +1,6 @@
-(ns todo-tool.core)
+(ns todo-tool.core
+  (:require [todo-tool.import :as import]))
 
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+(defn -main
+  [& _]
+  (import/execute))
