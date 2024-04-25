@@ -121,3 +121,33 @@ clj꞉todo-tool.import꞉> 
 {:title title2, :content content2}
 (nil nil)
 clj꞉todo-tool.import꞉> 
+{:title title1, :content content1}
+{:title title2, :content content2}
+(nil nil)
+clj꞉todo-tool.import꞉> 
+nil
+clj꞉todo-tool.import꞉> 
+; Syntax error compiling at (src/todo_tool/import.clj:17:12).
+; No such var: todo/json->todo
+clj꞉todo-tool.import꞉> 
+; Syntax error compiling at (src/todo_tool/import.clj:1:8375).
+; No such var: todo/json->todo
+clj꞉todo-tool.import꞉> 
+; Syntax error (ClassNotFoundException) compiling at (src/todo_tool/import.clj:1:8375).
+; taoensso.timbre
+clj꞉todo-tool.import꞉> 
+nil
+clj꞉todo-tool.import꞉> 
+; Syntax error compiling at (src/todo_tool/import.clj:17:12).
+; No such var: todo/json->todo
+clj꞉todo-tool.import꞉> 
+#'todo-tool.todo/json->todo
+clj꞉todo-tool.todo꞉> 
+#'todo-tool.import/execute
+clj꞉todo-tool.import꞉> 
+; Syntax error compiling at (src/todo_tool/import.clj:1:8375).
+; Can't take value of a macro: #'clojure.core/comment
+clj꞉todo-tool.import꞉> 
+({:id #uuid "f9f58138-1618-4230-89f9-8cfc521bc93c", :title "title1", :content "content1"}
+ {:id #uuid "0b2f9b21-8785-4bf1-829b-7edd69f48dc1", :title "title2", :content "content2"})
+clj꞉todo-tool.import꞉> 
