@@ -37,7 +37,7 @@ You can configure this with the setting:
 ; 
 
 ; Starting Jack-in Terminal: pushd /home/maaaashi/source/todo-tool ; lein update-in :dependencies conj '[nrepl,"1.1.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.47.1"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless ; popd
-; Using host:port 127.0.0.1:33223 ...
+; Using host:port 127.0.0.1:45537 ...
 ; Hooking up nREPL sessions ...
 ; Connected session: clj
 ; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
@@ -48,61 +48,76 @@ about why stdout printed to this file is prepended with `;` to be line comments.
 clj꞉todo-tool.core꞉> 
 ; Jack-in done.
 clj꞉todo-tool.core꞉> 
-; Syntax error compiling at (import.clj:6:5).
-; No such namespace: log
+nil
 clj꞉todo-tool.import꞉> 
-; Syntax error compiling at (import.clj:1:8375).
-; Unable to resolve symbol: file-name in this context
+#function[todo-tool.import/post-todo]
 clj꞉todo-tool.import꞉> 
-; Syntax error compiling at (import.clj:6:5).
-; No such namespace: log
+; Execution error (ConnectException) at sun.nio.ch.Net/connect0 (Net.java:-2).
+; Connection refused
 clj꞉todo-tool.import꞉> 
-; Syntax error compiling at (import.clj:1:8375).
-; Unable to resolve symbol: file-name in this context
+; Execution error (ConnectException) at sun.nio.ch.Net/connect0 (Net.java:-2).
+; Connection refused
 clj꞉todo-tool.import꞉> 
-; Syntax error compiling at (import.clj:6:5).
-; No such namespace: log
+#function[todo-tool.import/execute]
 clj꞉todo-tool.import꞉> 
-; Syntax error compiling at (import.clj:6:5).
-; No such namespace: log
+; 2024-04-25T13:13:30.897Z wsl2 INFO [todo-tool.import:10] - Importing: data.json
+nil
 clj꞉todo-tool.import꞉> 
-; Syntax error compiling at (import.clj:6:5).
-; No such namespace: log
+; 2024-04-25T13:18:17.116Z wsl2 INFO [todo-tool.import:10] - Importing: data.json
+nil
+clj꞉todo-tool.import꞉> 
+; 2024-04-25T13:40:07.415Z wsl2 INFO [todo-tool.import:10] - Importing: data.json
+nil
+clj꞉todo-tool.import꞉> 
+; Syntax error compiling at (src/todo_tool/import.clj:15:19).
+; No such namespace: io
+clj꞉todo-tool.import꞉> 
+; Syntax error compiling at (src/todo_tool/import.clj:15:19).
+; No such namespace: io
+clj꞉todo-tool.import꞉> 
+; Execution error (FileNotFoundException) at todo-tool.import/eval18368$loading (form-init742786534693339297.clj:1).
+; Could not locate ot_import/release__init.class, ot_import/release.clj or ot_import/release.cljc on classpath. Please check that namespaces with dashes use underscores in the Clojure file name.
+clj꞉todo-tool.import꞉> 
+; Execution error (FileNotFoundException) at todo-tool.import/eval29226$loading (form-init742786534693339297.clj:1).
+; Could not locate ot_import/release__init.class, ot_import/release.clj or ot_import/release.cljc on classpath. Please check that namespaces with dashes use underscores in the Clojure file name.
+clj꞉todo-tool.import꞉> 
+; Execution error (FileNotFoundException) at todo-tool.import/eval29232$loading (form-init742786534693339297.clj:1).
+; Could not locate ot_import/release__init.class, ot_import/release.clj or ot_import/release.cljc on classpath. Please check that namespaces with dashes use underscores in the Clojure file name.
+clj꞉todo-tool.import꞉> 
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in Terminal: pushd /home/maaaashi/source/todo-tool ; lein update-in :dependencies conj '[nrepl,"1.1.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.47.1"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless ; popd
+; nREPL Connection was closed
+; Using host:port 127.0.0.1:36755 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉todo-tool.core꞉> 
+; Jack-in done.
+clj꞉todo-tool.core꞉> 
+; Execution error (FileNotFoundException) at todo-tool.import/eval23192$loading (form-init13898279770266581871.clj:1).
+; Could not locate ot_import/release__init.class, ot_import/release.clj or ot_import/release.cljc on classpath. Please check that namespaces with dashes use underscores in the Clojure file name.
 clj꞉todo-tool.import꞉> 
 nil
 clj꞉todo-tool.import꞉> 
 #'todo-tool.import/execute
 clj꞉todo-tool.import꞉> 
-; Syntax error compiling at (import.clj:6:5).
-; Unable to resolve symbol: file-name in this context
+; Execution error (FileNotFoundException) at java.io.FileInputStream/open0 (FileInputStream.java:-2).
+; data.json (No such file or directory)
 clj꞉todo-tool.import꞉> 
 #'todo-tool.import/execute
 clj꞉todo-tool.import꞉> 
-; Syntax error compiling at (import.clj:6:5).
-; Unable to resolve symbol: file-name in this context
+; Execution error (FileNotFoundException) at java.io.FileInputStream/open0 (FileInputStream.java:-2).
+; data2.json (No such file or directory)
 clj꞉todo-tool.import꞉> 
 #'todo-tool.import/execute
 clj꞉todo-tool.import꞉> 
-; 2024-04-24T14:25:55.576Z wsl2 INFO [todo-tool.import:6] - Importing: data.json
-nil
-clj꞉todo-tool.import꞉> 
-; 2024-04-24T14:25:57.992Z wsl2 INFO [todo-tool.import:6] - Importing: data.json
-nil
-clj꞉todo-tool.import꞉> 
-nil
-clj꞉todo-tool.import꞉> 
-; 2024-04-24T14:53:07.251Z wsl2 INFO [todo-tool.import:6] - Importing: data.json
-nil
-clj꞉todo-tool.import꞉> 
-; Syntax error compiling at (import.clj:13:3).
-; Unable to resolve symbol: post-todo in this context
-clj꞉todo-tool.import꞉> 
-; Syntax error compiling at (import.clj:13:3).
-; Unable to resolve symbol: post-todo in this context
-clj꞉todo-tool.import꞉> 
-; Syntax error compiling at (import.clj:13:3).
-; Unable to resolve symbol: post-todo in this context
-clj꞉todo-tool.import꞉> 
-; Syntax error compiling at (import.clj:13:3).
-; Unable to resolve symbol: post-todo in this context
+{:title title1, :content content1}
+{:title title2, :content content2}
+(nil nil)
 clj꞉todo-tool.import꞉> 
