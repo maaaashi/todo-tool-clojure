@@ -1,5 +1,7 @@
 # todo-tool
 
+This is tools of todo app of cosujure.
+
 ```
 lein run
 ```
