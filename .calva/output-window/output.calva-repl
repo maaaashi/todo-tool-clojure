@@ -37,7 +37,7 @@ You can configure this with the setting:
 ; 
 
 ; Starting Jack-in Terminal: pushd /home/maaaashi/source/todo-tool ; lein update-in :dependencies conj '[nrepl,"1.1.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.47.1"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless ; popd
-; Using host:port 127.0.0.1:39595 ...
+; Using host:port 127.0.0.1:46261 ...
 ; Hooking up nREPL sessions ...
 ; Connected session: clj
 ; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
@@ -48,175 +48,198 @@ about why stdout printed to this file is prepended with `;` to be line comments.
 clj꞉todo-tool.core꞉> 
 ; Jack-in done.
 clj꞉todo-tool.core꞉> 
-; Syntax error compiling at (src/todo_tool/import.clj:1:8374).
-; Can't take value of a macro: #'clojure.core/comment
-clj꞉todo-tool.import꞉> 
-({:id #uuid "839ef129-6249-43b3-a9be-5d844a090daf", :title "title1", :content "content1"}
- {:id #uuid "461cd01e-5726-4cc8-9768-c43cad36061b", :title "title2", :content "content2"})
-clj꞉todo-tool.import꞉> 
-({:id #uuid "218d1509-b164-454d-a0dc-4623b2bd38d7", :title "title1", :content "content1"}
- {:id #uuid "c3971ea7-05b7-49a6-a9b3-a282ff4c387c", :title "title2", :content "content2"})
-clj꞉todo-tool.import꞉> 
-({:id #uuid "e1d3ea3f-4093-41a1-a72e-663ebd712e80", :title "title1", :content "content1"}
- {:id #uuid "63ee8f20-e62e-40e9-ad33-29652ec56efc", :title "title2", :content "content2"})
-clj꞉todo-tool.import꞉> 
-#function[todo-tool.import/post-todo]
-clj꞉todo-tool.import꞉> 
-#'todo-tool.import/execute
-clj꞉todo-tool.import꞉> 
-#'todo-tool.import/post-todo
-clj꞉todo-tool.import꞉> 
-; Execution error (ExceptionInfo) at slingshot.support/stack-trace (support.clj:201).
-; clj-http: status 404
-clj꞉todo-tool.import꞉> 
-nil
-clj꞉todo-tool.import꞉> 
-{:cached nil,
- :request-time 39,
- :repeatable? false,
- :protocol-version {:name "HTTP", :major 1, :minor 1},
- :streaming? true,
- :http-client
- #object[org.apache.http.impl.client.InternalHttpClient 0x2e822e48 "org.apache.http.impl.client.InternalHttpClient@2e822e48"],
- :chunked? false,
- :reason-phrase "Created",
- :headers
- {"Connection" "close",
-  "Content-Type" "text/plain",
-  "Matched-Stub-Id" "1239e8fe-a803-43b5-af45-5d7e06cdb943",
-  "Vary" "Accept-Encoding, User-Agent"},
- :orig-content-encoding "gzip",
- :status 201,
- :length -1,
- :body nil,
- :trace-redirects []}
-clj꞉todo-tool.import꞉> 
-; Execution error (JsonParseException) at com.fasterxml.jackson.core.JsonParser/_constructError (JsonParser.java:2567).
-; Unrecognized token 'ok': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
-;  at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 3]
-clj꞉todo-tool.import꞉> 
-; Execution error (JsonParseException) at com.fasterxml.jackson.core.JsonParser/_constructError (JsonParser.java:2567).
-; Unrecognized token 'ok': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
-;  at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 3]
-clj꞉todo-tool.import꞉> 
-; Execution error (ConnectException) at sun.nio.ch.Net/connect0 (Net.java:-2).
-; Connection refused
-clj꞉todo-tool.import꞉> 
-; Syntax error compiling at (src/todo_tool/import.clj:1:8374).
-; Can't take value of a macro: #'clojure.core/comment
-clj꞉todo-tool.import꞉> 
-; Execution error (ConnectException) at sun.nio.ch.Net/connect0 (Net.java:-2).
-; Connection refused
-clj꞉todo-tool.import꞉> 
-#'todo-tool.import/execute
-clj꞉todo-tool.import꞉> 
-#'todo-tool.import/post-todo
-clj꞉todo-tool.import꞉> 
-; Execution error (ConnectException) at sun.nio.ch.Net/connect0 (Net.java:-2).
-; Connection refused
-clj꞉todo-tool.import꞉> 
-{:cached nil,
- :request-time 40,
- :repeatable? false,
- :protocol-version {:name "HTTP", :major 1, :minor 1},
- :streaming? true,
- :http-client
- #object[org.apache.http.impl.client.InternalHttpClient 0x19511e41 "org.apache.http.impl.client.InternalHttpClient@19511e41"],
- :chunked? false,
- :reason-phrase "Created",
- :headers
- {"Connection" "close",
-  "Content-Type" "text/plain",
-  "Matched-Stub-Id" "0513f785-d6b0-419e-abeb-8ac9f885ad10",
-  "Vary" "Accept-Encoding, User-Agent"},
- :orig-content-encoding "gzip",
- :status 201,
- :length -1,
- :body {:status "success"},
- :trace-redirects []}
-clj꞉todo-tool.import꞉> 
-#'todo-tool.import/execute
-clj꞉todo-tool.import꞉> 
-nil
-clj꞉todo-tool.import꞉> 
-nil
-clj꞉todo-tool.import꞉> 
-nil
-clj꞉todo-tool.import꞉> 
-#'todo-tool.import/execute
-clj꞉todo-tool.import꞉> 
-; nil
-nil
-clj꞉todo-tool.import꞉> 
-:body
-clj꞉todo-tool.import꞉> 
-#'todo-tool.import/execute
-clj꞉todo-tool.import꞉> 
-; nil
-nil
-clj꞉todo-tool.import꞉> 
-; Execution error (ArityException) at todo-tool.import/eval29254 (form-init4796183708131239507.clj:22).
-; Wrong number of args (1) passed to: clojure.core/get-in
-clj꞉todo-tool.import꞉> 
-#'todo-tool.import/execute
-clj꞉todo-tool.import꞉> 
-nil
-clj꞉todo-tool.import꞉> 
-#'todo-tool.import/execute
-clj꞉todo-tool.import꞉> 
-{:cached nil,
- :request-time 4,
- :repeatable? false,
- :protocol-version {:name "HTTP", :major 1, :minor 1},
- :streaming? true,
- :http-client
- #object[org.apache.http.impl.client.InternalHttpClient 0x716b480f "org.apache.http.impl.client.InternalHttpClient@716b480f"],
- :chunked? false,
- :reason-phrase "Created",
- :headers
- {"Connection" "close",
-  "Content-Type" "text/plain",
-  "Matched-Stub-Id" "0513f785-d6b0-419e-abeb-8ac9f885ad10",
-  "Vary" "Accept-Encoding, User-Agent"},
- :orig-content-encoding "gzip",
- :status 201,
- :length -1,
- :body {:status "success"},
- :trace-redirects []}
-clj꞉todo-tool.import꞉> 
-#'todo-tool.import/execute
-clj꞉todo-tool.import꞉> 
-{:status "success"}
-clj꞉todo-tool.import꞉> 
-{:status "success"}
-clj꞉todo-tool.import꞉> 
-#'todo-tool.import/execute
-clj꞉todo-tool.import꞉> 
-{:cached nil,
- :request-time 3,
- :repeatable? false,
- :protocol-version {:name "HTTP", :major 1, :minor 1},
- :streaming? true,
- :http-client
- #object[org.apache.http.impl.client.InternalHttpClient 0x63b8cfbf "org.apache.http.impl.client.InternalHttpClient@63b8cfbf"],
- :chunked? false,
- :reason-phrase "Created",
- :headers
- {"Connection" "close",
-  "Content-Type" "text/plain",
-  "Matched-Stub-Id" "0513f785-d6b0-419e-abeb-8ac9f885ad10",
-  "Vary" "Accept-Encoding, User-Agent"},
- :orig-content-encoding "gzip",
- :status 201,
- :length -1,
- :body {:status "success"},
- :trace-redirects []}
-clj꞉todo-tool.import꞉> 
-#'todo-tool.import/execute
-clj꞉todo-tool.import꞉> 
-{:status "success"}
-clj꞉todo-tool.import꞉> 
-#'todo-tool.import/execute
-clj꞉todo-tool.import꞉> 
 "success"
+clj꞉todo-tool.import꞉> 
+; Syntax error compiling at (src/todo_tool/import.clj:1:8375).
+; Unable to resolve symbol: todos in this context
+clj꞉todo-tool.import꞉> 
+#'todo-tool.import/execute
+clj꞉todo-tool.import꞉> 
+; Apr 28, 2024 12:37:34 AM concurrently.core invoke
+; INFO: pipeline-unorderd blocking
+; 
+; Exception in thread "async-dispatch-3" java.lang.IllegalArgumentException: Don't know how to create ISeq from: java.lang.Character
+; 	at clojure.lang.RT.seqFrom(RT.java:557)
+; 	at clojure.lang.RT.seq(RT.java:537)
+; 	at clojure.lang.RT.more(RT.java:723)
+; 	at clojure.core$rest__5453.invokeStatic(core.clj:73)
+; 	at clojure.core$rest__5453.invoke(core.clj:73)
+; 	at todo_tool.import$execute$fn__29279$state_machine__9950__auto____29290$fn__29292.invoke(form-init12153826727511061642.clj:27)
+; 	at todo_tool.import$execute$fn__29279$state_machine__9950__auto____29290.invoke(form-init12153826727511061642.clj:27)
+; 	at clojure.core.async.impl.ioc_macros$run_state_machine.invokeStatic(ioc_macros.clj:978)
+; 	at clojure.core.async.impl.ioc_macros$run_state_machine.invoke(ioc_macros.clj:977)
+; 	at clojure.core.async.impl.ioc_macros$run_state_machine_wrapped.invokeStatic(ioc_macros.clj:982)
+; 	at clojure.core.async.impl.ioc_macros$run_state_machine_wrapped.invoke(ioc_macros.clj:980)
+; 	at clojure.core.async.impl.ioc_macros$put_BANG_$fn__9974.invok
+; e(ioc_macros.clj:999)
+; 	at clojure.core.async.impl.channels.ManyToManyChannel$fn__4726.invoke(channels.clj:194)
+; 	at clojure.lang.AFn.run(AFn.java:22)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at clojure.core.async.impl.concurrent$counted_thread_factory$reify__4552$fn__4553.invoke(concurrent.clj:29)
+; 	at clojure.lang.AFn.run(AFn.java:22)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; 2024-04-27T15:37:42.291Z wsl2 ERROR [todo-tool.import:35] - 
+;                                               java.lang.Thread.run              Thread.java: 1583
+;                                                                ...                              
+; clojure.core.async.impl.concurrent/counted-thread-factory/reify/fn           concurrent.clj:   29
+;                 java.util.concurrent.ThreadPoolExecutor$Worker.run  ThreadPoolExecutor.java:  642
+;                  java.util.concurre
+; nt.ThreadPoolExecutor.runWorker  ThreadPoolExecutor.java: 1144
+;                                                                ...                              
+;              clojure.core.async.impl.channels.ManyToManyChannel/fn             channels.clj:  265
+;                                   clojure.core.async/do-alts/fn/fn                async.clj:  288
+;                                    clojure.core.async/ioc-alts!/fn                async.clj:  421
+;       clojure.core.async.impl.ioc-macros/run-state-machine-wrapped           ioc_macros.clj:  982
+;               clojure.core.async.impl.ioc-macros/run-state-machine           ioc_macros.clj:  978
+;            concurrently.core/get-results!/fn/state-machine--auto--                 core.clj:  336
+;         concurrently.core/get-results!/fn/state-machine--auto--/fn                 core.clj:  336
+; clojure.lang.ExceptionInfo: channel read timeout! context = none
+;     reason: :concurrently.core/channel-timeout
+; 
+; 
+; 
+; Execution error (ExceptionInfo) at concurrently.core/get-results!$fn$state-machine$fn (core.clj:336).
+; channel read timeout! context = none
+clj꞉todo-tool.import꞉> 
+; Apr 28, 2024 12:37:42 AM concurrently.core invoke
+; INFO: pipeline-unorderd blocking
+; 
+; Exception in thread "async-dispatch-1" java.lang.IllegalArgumentException: Don't know how to create ISeq from: java.lang.Character
+; 	at clojure.lang.RT.seqFrom(RT.java:557)
+; 	at clojure.lang.RT.seq(RT.java:537)
+; 	at clojure.lang.RT.more(RT.java:723)
+; 	at clojure.core$rest__5453.invokeStatic(core.clj:73)
+; 	at clojure.core$rest__5453.invoke(core.clj:73)
+; 	at todo_tool.import$execute$fn__29279$state_machine__9950__auto____29290$fn__29292.invoke(form-init12153826727511061642.clj:27)
+; 	at todo_tool.import$execute$fn__29279$state_machine__9950__auto____29290.invoke(form-init12153826727511061642.clj:27)
+; 	at clojure.core.async.impl.ioc_macros$run_state_machine.invokeStatic(ioc_macros.clj:978)
+; 	at clojure.core.async.impl.ioc_macros$run_state_machine.invoke(ioc_macros.clj:977)
+; 	at clojure.core.async.impl.ioc_macros$run_state_machine_wrapped.invokeStatic(ioc_macros.clj:982)
+; 	at clojure.core.async.impl.ioc_macros$run_state_machine_wrapped.invoke(ioc_macros.clj:980)
+; 	at clojure.core.async.impl.ioc_macros$put_BANG_$fn__9974.invok
+; e(ioc_macros.clj:999)
+; 	at clojure.core.async.impl.channels.ManyToManyChannel$fn__4726.invoke(channels.clj:194)
+; 	at clojure.lang.AFn.run(AFn.java:22)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at clojure.core.async.impl.concurrent$counted_thread_factory$reify__4552$fn__4553.invoke(concurrent.clj:29)
+; 	at clojure.lang.AFn.run(AFn.java:22)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; 2024-04-27T15:37:50.330Z wsl2 ERROR [todo-tool.import:35] - 
+;                                               java.lang.Thread.run              Thread.java: 1583
+;                                                                ...                              
+; clojure.core.async.impl.concurrent/counted-thread-factory/reify/fn           concurrent.clj:   29
+;                 java.util.concurrent.ThreadPoolExecutor$Worker.run  ThreadPoolExecutor.java:  642
+;                  java.util.concurre
+; nt.ThreadPoolExecutor.runWorker  ThreadPoolExecutor.java: 1144
+;                                                                ...                              
+;              clojure.core.async.impl.channels.ManyToManyChannel/fn             channels.clj:  265
+;                                   clojure.core.async/do-alts/fn/fn                async.clj:  288
+;                                    clojure.core.async/ioc-alts!/fn                async.clj:  421
+;       clojure.core.async.impl.ioc-macros/run-state-machine-wrapped           ioc_macros.clj:  982
+;               clojure.core.async.impl.ioc-macros/run-state-machine           ioc_macros.clj:  978
+;            concurrently.core/get-results!/fn/state-machine--auto--                 core.clj:  336
+;         concurrently.core/get-results!/fn/state-machine--auto--/fn                 core.clj:  336
+; clojure.lang.ExceptionInfo: channel read timeout! context = none
+;     reason: :concurrently.core/channel-timeout
+; 
+; 
+; 
+; Execution error (ExceptionInfo) at concurrently.core/get-results!$fn$state-machine$fn (core.clj:336).
+; channel read timeout! context = none
+clj꞉todo-tool.import꞉> 
+; Apr 28, 2024 12:37:50 AM concurrently.core invoke
+; INFO: pipeline-unorderd blocking
+; 
+; Exception in thread "async-dispatch-5" java.lang.IllegalArgumentException: Don't know how to create ISeq from: java.lang.Character
+; 	at clojure.lang.RT.seqFrom(RT.java:557)
+; 	at clojure.lang.RT.seq(RT.java:537)
+; 	at clojure.lang.RT.more(RT.java:723)
+; 	at clojure.core$rest__5453.invokeStatic(core.clj:73)
+; 	at clojure.core$rest__5453.invoke(core.clj:73)
+; 	at todo_tool.import$execute$fn__29279$state_machine__9950__auto____29290$fn__29292.invoke(form-init12153826727511061642.clj:27)
+; 	at todo_tool.import$execute$fn__29279$state_machine__9950__auto____29290.invoke(form-init12153826727511061642.clj:27)
+; 	at clojure.core.async.impl.ioc_macros$run_state_machine.invokeStatic(ioc_macros.clj:978)
+; 	at clojure.core.async.impl.ioc_macros$run_state_machine.invoke(ioc_macros.clj:977)
+; 	at clojure.core.async.impl.ioc_macros$run_state_machine_wrapped.invokeStatic(ioc_macros.clj:982)
+; 	at clojure.core.async.impl.ioc_macros$run_state_machine_wrapped.invoke(ioc_macros.clj:980)
+; 	at clojure.core.async.impl.ioc_macros$put_BANG_$fn__9974.invok
+; e(ioc_macros.clj:999)
+; 	at clojure.core.async.impl.channels.ManyToManyChannel$fn__4726.invoke(channels.clj:194)
+; 	at clojure.lang.AFn.run(AFn.java:22)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at clojure.core.async.impl.concurrent$counted_thread_factory$reify__4552$fn__4553.invoke(concurrent.clj:29)
+; 	at clojure.lang.AFn.run(AFn.java:22)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; 2024-04-27T15:37:58.350Z wsl2 ERROR [todo-tool.import:35] - 
+;                                               java.lang.Thread.run              Thread.java: 1583
+;                                                                ...                              
+; clojure.core.async.impl.concurrent/counted-thread-factory/reify/fn           concurrent.clj:   29
+;                 java.util.concurrent.ThreadPoolExecutor$Worker.run  ThreadPoolExecutor.java:  642
+;                  java.util.concurre
+; nt.ThreadPoolExecutor.runWorker  ThreadPoolExecutor.java: 1144
+;                                                                ...                              
+;              clojure.core.async.impl.channels.ManyToManyChannel/fn             channels.clj:  265
+;                                   clojure.core.async/do-alts/fn/fn                async.clj:  288
+;                                    clojure.core.async/ioc-alts!/fn                async.clj:  421
+;       clojure.core.async.impl.ioc-macros/run-state-machine-wrapped           ioc_macros.clj:  982
+;               clojure.core.async.impl.ioc-macros/run-state-machine           ioc_macros.clj:  978
+;            concurrently.core/get-results!/fn/state-machine--auto--                 core.clj:  336
+;         concurrently.core/get-results!/fn/state-machine--auto--/fn                 core.clj:  336
+; clojure.lang.ExceptionInfo: channel read timeout! context = none
+;     reason: :concurrently.core/channel-timeout
+; 
+; 
+; 
+; Execution error (ExceptionInfo) at concurrently.core/get-results!$fn$state-machine$fn (core.clj:336).
+; channel read timeout! context = none
+clj꞉todo-tool.import꞉> 
+; Apr 28, 2024 12:37:58 AM concurrently.core invoke
+; INFO: pipeline-unorderd blocking
+; 
+; Exception in thread "async-dispatch-4" java.lang.IllegalArgumentException: Don't know how to create ISeq from: java.lang.Character
+; 	at clojure.lang.RT.seqFrom(RT.java:557)
+; 	at clojure.lang.RT.seq(RT.java:537)
+; 	at clojure.lang.RT.more(RT.java:723)
+; 	at clojure.core$rest__5453.invokeStatic(core.clj:73)
+; 	at clojure.core$rest__5453.invoke(core.clj:73)
+; 	at todo_tool.import$execute$fn__29279$state_machine__9950__auto____29290$fn__29292.invoke(form-init12153826727511061642.clj:27)
+; 	at todo_tool.import$execute$fn__29279$state_machine__9950__auto____29290.invoke(form-init12153826727511061642.clj:27)
+; 	at clojure.core.async.impl.ioc_macros$run_state_machine.invokeStatic(ioc_macros.clj:978)
+; 	at clojure.core.async.impl.ioc_macros$run_state_machine.invoke(ioc_macros.clj:977)
+; 	at clojure.core.async.impl.ioc_macros$run_state_machine_wrapped.invokeStatic(ioc_macros.clj:982)
+; 	at clojure.core.async.impl.ioc_macros$run_state_machine_wrapped.invoke(ioc_macros.clj:980)
+; 	at clojure.core.async.impl.ioc_macros$put_BANG_$fn__9974.invok
+; e(ioc_macros.clj:999)
+; 	at clojure.core.async.impl.channels.ManyToManyChannel$fn__4726.invoke(channels.clj:194)
+; 	at clojure.lang.AFn.run(AFn.java:22)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+; 	at clojure.core.async.impl.concurrent$counted_thread_factory$reify__4552$fn__4553.invoke(concurrent.clj:29)
+; 	at clojure.lang.AFn.run(AFn.java:22)
+; 	at java.base/java.lang.Thread.run(Thread.java:1583)
+; 2024-04-27T15:38:06.374Z wsl2 ERROR [todo-tool.import:35] - 
+;                                               java.lang.Thread.run              Thread.java: 1583
+;                                                                ...                              
+; clojure.core.async.impl.concurrent/counted-thread-factory/reify/fn           concurrent.clj:   29
+;                 java.util.concurrent.ThreadPoolExecutor$Worker.run  ThreadPoolExecutor.java:  642
+;                  java.util.concurre
+; nt.ThreadPoolExecutor.runWorker  ThreadPoolExecutor.java: 1144
+;                                                                ...                              
+;              clojure.core.async.impl.channels.ManyToManyChannel/fn             channels.clj:  265
+;                                   clojure.core.async/do-alts/fn/fn                async.clj:  288
+;                                    clojure.core.async/ioc-alts!/fn                async.clj:  421
+;       clojure.core.async.impl.ioc-macros/run-state-machine-wrapped           ioc_macros.clj:  982
+;               clojure.core.async.impl.ioc-macros/run-state-machine           ioc_macros.clj:  978
+;            concurrently.core/get-results!/fn/state-machine--auto--                 core.clj:  336
+;         concurrently.core/get-results!/fn/state-machine--auto--/fn                 core.clj:  336
+; clojure.lang.ExceptionInfo: channel read timeout! context = none
+;     reason: :concurrently.core/channel-timeout
+; 
+; 
+; 
+; Execution error (ExceptionInfo) at concurrently.core/get-results!$fn$state-machine$fn (core.clj:336).
+; channel read timeout! context = none
 clj꞉todo-tool.import꞉> 
