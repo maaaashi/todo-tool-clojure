@@ -13,8 +13,12 @@
               :content-type :json
               :as :json}))
 
+(defn- register-todo [todo]
+  (post-todo todo)
+  (log/info "Registered:" {:id todo}))
+
 (defn execute []
-  (let [file-name "data2.json"]
+  (let [file-name "data.json"]
     (with-open [r (io/reader (io/resource file-name))]
       (let [todos (->> (json/parse-stream r true)
                   (map todo/json->todo)) 
@@ -22,7 +26,7 @@
             shared-process (c/concurrent-process-blocking 1
                                                           (a/chan 1)
                                                           (d/map (fn [{todo :data}]
-                                                                   (post-todo todo)))
+                                                                   (register-todo todo)))
                                                           (a/chan 2)
                                                           {:ordered? false})
             

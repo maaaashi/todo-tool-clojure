@@ -1181,3 +1181,16 @@ clj꞉todo-tool.import꞉> 
 ; Apr 28, 2024 10:36:05 AM concurrently.core invoke
 ; INFO: pipeline-unorderd blocking
 clj꞉todo-tool.import꞉> 
+#'todo-tool.import/register-todo
+clj꞉todo-tool.import꞉> 
+#'todo-tool.import/execute
+clj꞉todo-tool.import꞉> 
+; 2024-04-28T05:32:13.290Z wsl2 INFO [todo-tool.import:18] - Registered: {:id {:id #uuid "87d106fb-6fd3-4684-b7c8-e779bf241766", :title "title1", :content "content1"}}
+; 2024-04-28T05:32:13.298Z wsl2 INFO [todo-tool.import:18] - Registered: {:id {:id #uuid "60fecbce-cca8-48ce-afc8-2ab4b6a7f726", :title "title2", :content "content2"}}
+[nil nil]
+; 
+; Apr 28, 2024 2:32:13 PM concurrently.core invoke
+; INFO: pipeline-unorderd blocking
+clj꞉todo-tool.import꞉> 
+#'todo-tool.import/execute
+clj꞉todo-tool.import꞉> 
