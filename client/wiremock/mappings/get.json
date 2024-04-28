@@ -1,0 +1,15 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/todos"
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "Content-Type": "text/plain"
+    },
+    "jsonBody": {
+      "status": "success"
+    }
+  }
+}
