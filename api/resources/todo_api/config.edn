@@ -1,8 +1,11 @@
 {:duct.profile/base
  {:duct.core/project-ns todo-api
+  
+  :todo-api.handler.system/ping {}
 
   :duct.router/ataraxy
-  {:routes {}}}
+  {:routes {"/v1" {"/systems" {[:get "/ping"] [:system/ping]}}}
+   :handlers {:system/ping #ig/ref :todo-api.handler.system/ping}}}
 
  :duct.profile/dev   #duct/include "dev"
  :duct.profile/local #duct/include "local"
