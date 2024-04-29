@@ -19,5 +19,3 @@ manifests:
         setValues:
           replicas: 1
           imagePullPolicy: Never
-        setValueTemplates:
-          image: "{{ .IMAGE_FULLY_QUALIFIED_docker_registry_uzabase_com_robin_ot_api }}"

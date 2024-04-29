@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Development
+kind: Deployment
 metadata:
   name: todo-api
   labels:
@@ -19,5 +19,5 @@ spec:
         imagePullPolicy: Never
         name: todo-api
         ports:
-          - name: http-port
+          - name: api-port
             containerPort: 3000
