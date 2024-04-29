@@ -1,0 +1,23 @@
+apiVersion: skaffold/v4beta9
+kind: Config
+metadata:
+  name: todo-api-clojure
+build:
+  artifacts:
+    - image: todo-api-clojure
+      context: ../api
+      docker:
+        dockerfile: .
+  local:
+    push: false
+    useBuildkit: true
+manifests:
+  helm:
+    releases:
+      - name: todo-api
+        chartPath: app/helm
+        setValues:
+          replicas: 1
+          imagePullPolicy: Never
+        setValueTemplates:
+          image: "{{ .IMAGE_FULLY_QUALIFIED_docker_registry_uzabase_com_robin_ot_api }}"
