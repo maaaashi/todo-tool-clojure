@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Development
+metadata:
+  name: todo-api
+  labels:
+    app: todo-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: todo-api
+  template:
+    metadata:
+      labels:
+        app: todo-api
+    spec:
+      containers:
+      - image: todo-api-clojure
+        imagePullPolicy: Never
+        name: todo-api
+        ports:
+          - name: http-port
+            containerPort: 3000

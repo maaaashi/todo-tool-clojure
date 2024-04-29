@@ -7,7 +7,7 @@ build:
     - image: todo-api-clojure
       context: ../api
       docker:
-        dockerfile: .
+        dockerfile: ./app/Dockerfile
   local:
     push: false
     useBuildkit: true
