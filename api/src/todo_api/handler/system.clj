@@ -3,6 +3,7 @@
 
 (defn- ping
   [_]
+  (println "ping")
   {:status 200
    :body "pong"})
 
