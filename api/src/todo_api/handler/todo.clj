@@ -1,12 +1,14 @@
 (ns todo-api.handler.todo
-  (:require [integrant.core :as ig]))
+  (:require [integrant.core :as ig]
+            [todo-api.usecase.todo :as usecase]))
 
-(defn- handler [req]
-  (println req)
+(defn handler
+  [{:keys [body-params]}]
+  (usecase/register body-params)
   {:status 200
-   :body { :message "Hello, World!" }})
+   :body "hello world"})
 
 (defmethod ig/init-key :todo-api.handler.todo/post
-  [_ deps]
-  (handler deps))
+  [_ _]
+  handler)
 
