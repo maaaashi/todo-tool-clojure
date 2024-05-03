@@ -24,4 +24,5 @@
                                    [hawk "0.2.11"]
                                    [eftest "0.5.9"]
                                    [kerodon "0.9.1"]
-                                   [nubank/mockfn "0.7.0"]]}})
+                                   [nubank/mockfn "0.7.0"]
+                                   [com.gearswithingears/shrubbery "0.4.1"]]}})
