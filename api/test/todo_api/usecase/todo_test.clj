@@ -7,7 +7,8 @@
 
 (t/deftest register-test
   (t/testing "TODOを登録することができる" 
-    (let [todo {:id "id" :title "test"}]
-     (mockfn/verifying
-      [(b/TodoRepository matchers/any-args? todo) :ok (matchers/exactly 1)]
-      (sut/register todo)))))
+    (let [todo {:id "id" :title "test"}] 
+      (mockfn/providing [(b/create-todo matchers/any-args? matchers/any-args?) :ok]
+                        (mockfn/verifying
+                         [(b/create-todo matchers/any-args? todo) :ok (matchers/exactly 1)]
+                         (sut/register :deps todo))))))
