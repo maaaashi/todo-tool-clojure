@@ -4,7 +4,7 @@
 
 (defn handler
   [{:keys [body-params]}]
-  (usecase/register body-params)
+  (usecase/register {} body-params)
   {:status 200
    :body "hello world"})
 
