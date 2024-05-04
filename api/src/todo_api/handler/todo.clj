@@ -1,10 +1,11 @@
 (ns todo-api.handler.todo
   (:require [integrant.core :as ig]
-            [todo-api.usecase.todo :as usecase]))
+            [todo-api.usecase.todo :as u]))
 
 (defn handler
   [{:keys [body-params]}]
-  (usecase/register {} body-params)
+  (let [deps {}]
+   (u/register deps body-params))
   {:status 200
    :body "hello world"})
 
