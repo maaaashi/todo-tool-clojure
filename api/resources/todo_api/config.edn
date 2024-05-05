@@ -1,14 +1,24 @@
 {:duct.profile/base
  {:duct.core/project-ns todo-api
-  
+
   :todo-api.handler.system/ping {}
   :todo-api.handler.todo/post {}
+  :duct.database.sql/hikaricp
+  {:username #duct/env "TODO_DB_USER_NAME"
+   :port-number #duct/env "TODO_DB_PORT_NUMBER"
+   :adapter #duct/env "TODO_DB_ADAPTER"
+   :server-name #duct/env "TODO_DB_SERVER_NAME"
+   :database-name #duct/env "TODO_DB_NAME"
+   :password #duct/env "TODO_DB_PASSWORD"}
 
   :duct.router/ataraxy
   {:routes {"/v1" {"/systems" {[:get "/ping"] [:system/ping]}
                    [:post "/todos"] [:todo/post]}}
    :handlers {:system/ping #ig/ref :todo-api.handler.system/ping
               :todo/post #ig/ref :todo-api.handler.todo/post}}}
+ 
+ :todo-api.driver.database.todo/todo-repository
+ {:db #ig/ref :duct.database.sql/hikaricp}
 
  :duct.profile/dev   #duct/include "dev"
  :duct.profile/local #duct/include "local"
