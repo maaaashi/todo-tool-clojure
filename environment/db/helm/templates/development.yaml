@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todo-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: todo-db
+  template:
+    metadata:
+      labels:
+        app: todo-db
+    spec:
+      containers:
+      - name: todo-db
+        image: postgres:16.2-bullseye
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: POSTGRES_PASSWORD
+          value: password
+        ports:
+        - name: db-port
+          containerPort: 5432
+        volumeMounts:
+        - mountPath: /docker-entrypoint-initdb.d
+          name: autoload-scripts
+        - mountPath: /data/sql
+          name: init-sql
+      volumes:
+      - name: autoload-scripts
+        configMap:
+          name: "todo-db-autoload-scripts"
+      - name: init-sql
+        configMap:
+          name: "todo-db-sql"

@@ -14,8 +14,7 @@ build:
 manifests:
   helm:
     releases:
-      - name: todo-api
-        chartPath: app/helm
-        setValues:
-          replicas: 1
-          imagePullPolicy: Never
+      # - name: todo-api
+      #   chartPath: app/helm
+      - name: todo-db
+        chartPath: db/helm

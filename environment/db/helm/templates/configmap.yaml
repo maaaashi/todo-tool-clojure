@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: todo-db-autoload-scripts
+data:
+{{ (.Files.Glob "data/**.sh").AsConfig | indent 2 }}
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: todo-db-sql
+data:
+{{ (.Files.Glob "data/**.sql").AsConfig | indent 2 }}
