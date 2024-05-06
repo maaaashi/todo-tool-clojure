@@ -1,16 +1,17 @@
 {:duct.profile/base
  {:duct.core/project-ns todo-api
+  
+  :duct.module/sql 
+  {:database-url "jdbc:postgresql://localhost:5432/todo"
+   :database-user "developer"
+   :database-password "password"
+   :database-pool {:adapter :hikaricp
+                   :properties {:maximumPoolSize 10
+                                :minimumIdle 5
+                                :driverClassName "org.postgresql.Driver"}}}
 
   :todo-api.handler.system/ping {}
   :todo-api.handler.todo/post {}
-  :duct.database.sql/hikaricp
-  {:username #duct/env "TODO_DB_USER_NAME"
-   :port-number #duct/env "TODO_DB_PORT_NUMBER"
-   :adapter #duct/env "TODO_DB_ADAPTER"
-   :server-name #duct/env "TODO_DB_SERVER_NAME"
-   :database-name #duct/env "TODO_DB_NAME"
-   :password #duct/env "TODO_DB_PASSWORD"}
-
   :duct.router/ataraxy
   {:routes {"/v1" {"/systems" {[:get "/ping"] [:system/ping]}
                    [:post "/todos"] [:todo/post]}}
