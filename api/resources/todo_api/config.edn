@@ -16,7 +16,10 @@
                    [:post "/todos"] [:todo/post]}}
    :handlers {:system/ping #ig/ref :todo-api.handler.system/ping
               :todo/post #ig/ref :todo-api.handler.todo/post}}}
- 
+
+ :todo-api.driver.database.todo/get-todo
+ {:todo-repository #ig/ref :todo-api.driver.database.todo/todo-repository}
+
  :todo-api.driver.database.todo/todo-repository
  {:db #ig/ref :duct.database.sql/hikaricp}
 
